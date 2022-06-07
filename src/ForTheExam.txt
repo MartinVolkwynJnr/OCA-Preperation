@@ -1,0 +1,8 @@
+Notes given to be aware of for the exam:
+
+Code Formatting:
+    - when you do see the line number 1 or no line numbers at all, you have to make sure imports aren't missing!
+    - Exam save space by merging code on the same line
+    - When no line numbers / main method exist assume the imports and other methods outside of scope of the question
+        is correct, unless stated otherwise.
+

@@ -1,0 +1,7 @@
+1. Be able to write code using a main() method
+2. understand the effect of using packages and imports.
+3. be able to recognize a constructor
+4. be able to identify legal and illlegal declarations and initialization
+5. be able to determine where variables go into and out of scope
+6. be ables to recognize misplaced statements in a class
+7. know how to identify when an object is eligible for Garbage collection
