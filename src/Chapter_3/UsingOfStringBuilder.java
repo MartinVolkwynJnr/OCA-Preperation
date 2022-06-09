@@ -8,6 +8,11 @@ public class UsingOfStringBuilder {
         - Important StringBuilder Methods
         - StringBuilder vs. StringBuffer
      */
+
+    /*
+            StringBuilder vs. StringBuffer
+            StringBuffer does the same as StringBuilder but slower and StringBuffer is threadsafe
+     */
     public void creatingStringBuilder(){
         // StringBuilder = mutable / changeable
         StringBuilder sb = new StringBuilder("1234");
@@ -27,10 +32,12 @@ public class UsingOfStringBuilder {
         sb.length();
         sb.substring(0,3);
         sb.append("abc");
+        sb.append("3232",0,4);
         sb.insert(0,"cde");
         sb.delete(3,5);
         sb.deleteCharAt(4);
         sb.reverse();
+        sb.replace(0,3,"321");
         System.out.println(sb.toString());
     }
 

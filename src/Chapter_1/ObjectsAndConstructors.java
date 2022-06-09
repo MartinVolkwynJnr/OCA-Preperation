@@ -12,11 +12,12 @@ public class ObjectsAndConstructors {
      */
 
 
-    public static String name;
+    public static String name = "michelle";
     public int age =  18; // inline initialization
 
-    // initializer blocks these are run to initialize class variables
+    // initializer blocks these are run to initialize class variables static or instance
     {
+        name = "martin";
         System.out.println("name");
 
     }

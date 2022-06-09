@@ -6,3 +6,35 @@ Code Formatting:
     - When no line numbers / main method exist assume the imports and other methods outside of scope of the question
         is correct, unless stated otherwise.
 
+Common Tips to Determine if Code Compiles:
+■ Keep an eye out for all reserved words. [Chapter 1]
+■ Verify brackets—{}—and parentheses—()—are being used correctly. [Chapter 1]
+■ Verify new is used appropriately for creating objects. [Chapter 1]
+■ Ignore all line indentation especially with if-then statements that do not use brackets
+    {}. [Chapter 2]
+■ Make sure operators use compatible data types, such as the logical complement operator
+    (!) only applied to boolean values, and arithmetic operators (+, -, ++, --) only
+    applied to numeric values. [Chapter 2]
+■ For any numeric operators, check for automatic numeric promotion and order or operation
+    when evaluating an expression. [Chapter 2]
+■ Verify switch statements use acceptable data types. [Chapter 2]
+■ Remember == is not the same as equals(). [Chapter 3]
+■ String values are immutable. [Chapter 3]
+■ Non-void methods must return a value that matches or is a subclass of the return type
+    of the method. [Chapter 4]
+■ If two classes are involved, make sure access modifiers allow proper access of variables
+    and methods. [Chapter 4]
+■ Nonstatic methods and variables require an object instance to access. [Chapter 4]
+■ If a class is missing a default no-argument constructor or the provided constructors do
+    not explicitly call super(), assume the compiler will automatically insert them. [Chapter 5]
+■ Make sure abstract methods do not define an implementation, and likewise concrete
+    methods always define an implementation. [Chapter 5]
+■ You implement an interface and extend a class. [Chapter 5]
+■ A class can be cast to a reference of any superclass it inherits from or interface it implements.[Chapter 5]
+■ Checked exceptions must be caught; unchecked exceptions may be caught but do not need to be. [Chapter 6]
+■ try blocks require a catch and/or finally block for the OCA exam. [Chapter 6]
+
+We have listed the chapter each tip is found in so that you can go back and review any
+that you do not fully understand. Once you’ve determined that the code does in fact compile,
+proceed with tracing the application logic and trying to determine what the code actually
+does.

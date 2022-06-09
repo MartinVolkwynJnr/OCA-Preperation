@@ -4,10 +4,10 @@ public class ChapterThreeMain {
     public static void main(String[] args) {
         ChapterThreeMain ctm = new ChapterThreeMain();
 
-//        ctm.StringManipulation();
-//        ctm.UsingStringBuilder();
-//        ctm.DateAndTimes();
-//        ctm.EqualityUnderstanding();
+        ctm.StringManipulation();
+        ctm.UsingStringBuilder();
+        ctm.DateAndTimes();
+        ctm.EqualityUnderstanding();
         ctm.UnderstandingArrays();
         ctm.UnderstandingArrayLists();
     }
@@ -25,6 +25,13 @@ public class ChapterThreeMain {
     }
 
     private void UnderstandingArrayLists() {
+        UnderstandingArrayLists usl = new UnderstandingArrayLists();
+        usl.creatingArrayLists();
+        usl.usingArrayLists();
+        usl.convertingArrayAndLists();
+        usl.sortingArrayLists();
+        usl.autoBoxing();
+        usl.WrapperClasses();
     }
 
     private void UnderstandingArrays() {
@@ -38,12 +45,16 @@ public class ChapterThreeMain {
     }
 
     private void EqualityUnderstanding() {
-
+        EqualityMethodUnderstanding em = new EqualityMethodUnderstanding();
+        em.understandingEquality();
     }
 
     private void DateAndTimes() {
         DatesAndTimes.printStringDates();
         DatesAndTimes.printCustomDates();
         DatesAndTimes.printLocalDates();
+        DatesAndTimes dt = new DatesAndTimes();
+        dt.manipulatingDates();
+        dt.workingWithPeriods();
     }
 }

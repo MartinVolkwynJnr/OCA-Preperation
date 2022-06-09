@@ -3,9 +3,12 @@ package Chapter_5;
 import Chapter_5.AbstractClasses.Animal;
 import Chapter_5.AbstractClasses.Bird;
 import Chapter_5.AbstractClasses.Dog;
-import Chapter_5.DateFormats.DateFormatting;
 import Chapter_5.Inheritance.*;
 import Chapter_5.Interfaces.ITelephone;
+import Chapter_5.Polymorphism.Alligator;
+import Chapter_5.Polymorphism.Crocodile;
+import Chapter_5.Polymorphism.Reptile;
+import Chapter_5.Polymorphism.ZooWorker;
 import Chapter_5.RandomObjectsExamples.Mobile;
 import Chapter_5.RandomObjectsExamples.OfficePhone;
 
@@ -13,15 +16,10 @@ public class ChapterFiveMain {
     public static void main(String[] args) {
         ChapterFiveMain cfm = new ChapterFiveMain();
 
-        cfm.InheritanceChecks();
-        cfm.InterfaceChecks();
-        cfm.AbstractChecks();
-        cfm.polimorphism();
-
-        //DatesFormatting
-        DateFormatting.printStringDates();
-        DateFormatting.printCustomDates();
-        DateFormatting.printLocalDates();
+//        cfm.InheritanceChecks();
+//        cfm.InterfaceChecks();
+//        cfm.AbstractChecks();
+        cfm.polymorphism();
     }
 
     private void InheritanceChecks(){
@@ -29,10 +27,10 @@ public class ChapterFiveMain {
         Car c1 = new Car(); // car extends vehicle
         Nissan carType = new Nissan(); // nissan extends car
 
-        Vehicle v2 = c1;
-        Car c2 = carType;
+        Vehicle v2 = c1; // super class = subclass
+        Car c2 = carType; // super class = subclass
 
-//        Nissan carType2 = (Nissan) c1;
+        Nissan carType2 = (Nissan) c1;// subclass = (Casting)superclass -> runtime classcast exception
         /*
         Exception in thread "main" java.lang.ClassCastException: Chapter_5.Inheritance.Car cannot be cast to Chapter_5.Inheritance.Nissan
             at Chapter_5.ChapterFiveMain.InheritanceChecks(ChapterFiveMain.java:34)
@@ -94,7 +92,60 @@ public class ChapterFiveMain {
 //        Bird p = yorkie; INVALID  DOG != BIRD
     }
 
-    private void polimorphism(){
-        //TODO: martin
+    private void polymorphism(){
+        //One of the most useful applications of polymorphism is the ability to pass instances
+        // of a subclass or interface to a method
+
+
+        /*
+            Understanding Polymorphism
+            - Object vs. Reference
+            - Casting Objects
+            - Virtual Methods
+            - Polymorphic Parameters
+            - Polymorphism and Method Overriding
+         */
+        /*
+            Object vs. Reference
+            Object Reference = new object();
+            1. Type of the object determines which properties exist whithin the object in memory
+            2. type of the reference to the object determines which methods and variables are accessible to the java program
+
+
+         */
+
+        /*
+            Casting objects
+            1. Casting an object from a subclass to a superclass doesn't require an explicit cast.
+            2. Casting an object from a superclass to a subclass requires an explicit cast.
+            3. the compiler will not allow casts to unrelated types
+            4. when the code compiles without issue, an exception may be thrown at runtime if
+                the object being cast is not actually an instance of that class. (Throws ClassCastException at runtime)
+         */
+        /*
+            Virtual Methods
+            - is a method in which the specific implementation is not determined until runtime
+            - all non-final, non-static and non-private java methods are considered virtual methods
+
+         */
+
+        //Polymorphism implemented
+        ZooWorker.feed(new Alligator()); // subclass alligator of type reptile
+        ZooWorker.feed(new Crocodile()); // subclass crocodile of type reptile
+        ZooWorker.feed(new Reptile()); // Supper class reptile
+        /*
+            a subclass can't declare an overridden method with a new or broader exception than in the superclass
+            since the method may be accessed using a reference to the superclass.
+         */
+
+        /*
+                BENEFITS OF POLYMORPHISM
+                - makes code more reusable
+                - makes code more dynamic [ Dynamic binding]
+                - allows the actual decision of which method is to be invoked to be taken at runtime based on the actual class of object
+
+
+         */
+
     }
 }

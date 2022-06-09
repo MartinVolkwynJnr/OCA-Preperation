@@ -24,13 +24,15 @@ public class JavaLoops {
 
     public void forLoop(){
         //for (count variable; condition; incremental/ decremental sequence)
-        for(int i = 0; i >= 10; i++){
+        for(int i = 0; i <= 10; i++){
+            System.out.println(i);
             if (i == 5)
                 break;
         }
 
         //multiple variables are valid
-        for(int i = 0, j = 10; i > j; i++, j--){
+        for(int i = 0, j = 10; i < j; i++, j--){
+            System.out.println(i + " " + j);
             if (i == j)
                 break;
         }

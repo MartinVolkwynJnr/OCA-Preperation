@@ -4,9 +4,9 @@ public class ChapterTwoMain {
     public static void main(String[] args) {
         ChapterTwoMain ctm = new ChapterTwoMain();
 
-        ctm.javaOperators();
-        ctm.ifElseAndTernaryConstructs();
-        ctm.switchStatements();
+//        ctm.javaOperators();
+//        ctm.ifElseAndTernaryConstructs();
+//        ctm.switchStatements();
         ctm.loopConstructs();
     }
 
@@ -41,9 +41,9 @@ public class ChapterTwoMain {
             use of break and continue
          */
         JavaLoops jl = new JavaLoops();
-        jl.whileLoop();
+        //jl.whileLoop();
         jl.forLoop();
-        jl.enhancedForLoop();
-        jl.doWhileLoop();
+//        jl.enhancedForLoop();
+//        jl.doWhileLoop();
     }
 }
